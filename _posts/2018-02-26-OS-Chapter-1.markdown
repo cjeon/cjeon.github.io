@@ -5,6 +5,12 @@ categories: OS
 ---
 Operating systems: Principles and Practice, Thomas Anderson and Michael Dahlin 을 공부하며 요약 정리하는 노트입니다.
 
+<nav>
+  <h4>Table of Contents</h4>
+  * this unordered seed list will be replaced by toc as unordered list
+  {:toc}
+</nav>
+
 # Chapter 1. Introduction
 
 ## 1.1 What Is An Operating System?
@@ -30,24 +36,64 @@ Roles of OS: Referee, Illusionist, Glue.
 | Adoption      | has many users                                               |
 
 * Reliability and availability is measured by mean time to failure (mttf) and mean time to repair (mttr).
-
 * Enforcement: how the OS ensures that only permitted actions are allowed.
-
 * Security policy: what is permitted and what is not.
-
 * AVM: Abstract Virtual Machine. Separates Hardware layer and application layer. Kernel provides 1. API, 2. memory access model, and 3. which instructions can be legally executed. A well designed AVM makes hardware and application evolve independently. 
-
 * HAL: Hardware Abstraction Layer: Hardware is abstracted and OS functions on abstracted hardware. 
-
 * Performance: 
-
   * overhead: the added resource cost due to the abstraction added (efficiency: lack of overhead due to abstraction added)
-
   * Resource fairness, response time, throughput, predictability 
   * Example: A car and a road - if there is no stoplights(OS), a car uses full resources without needing to slow down. A system such as stoplights and crosswalk(OS) allows other cars and people (processes) to share the resources, but overhead, delay increases. As the road gets more crowded, througput goes up and predictabilty goes down. 
-
 * network effect: more users -> good environment & cheaper hardware -> more users (cycle)
+* proprietary system: OS is owned by a company <-> open source system
 
-* proprietary system: OS is owned by a company <-> open system
 
-* 
+
+## 1.3 Operating Systems: Past, Present, and Future
+### 1.3.1 Impact of Technology Trends
+### 1.3.2 Early Operating Systems
+were designed to reduces bugs since computing cost was expensive.
+### 1.3.3 Multi-User Operating Systems
+Batch Operating System: loop {load, run, unload single task}. While running, Direct Memory Access(DMA) transfers next/previous job. 
+BOS was soon extended to run multiple applications. EX) while doing I/O, OS runs next job. Multitasking increases processor efficiency nearly 100%. 
+How to debug an OS: rebooting the machine is expensive - use virtual machine, run OS as an app.
+### 1.3.4 Time-Sharing Operating Systems
+Time-Sharing operating systems are designed to support interactive use of the computer rather than the batch mode processing of earlier systems. Each user's input causes interrupt to processor. 
+### 1.3.5 Modern Operating Systems
+vary from desktop OS, mobile OS, server to embedded.
+### 1.3.6. Future OS
+very large scale date centers, very large scale multi core etc.
+
+## Exercises & My answers
+1. What is an example of an operating system as:  
+
+	a. Referee?  
+	
+	b. Illusionist?  
+	
+	c. Glue?  
+	
+
+my answer: see [section 1.1](#11-what-is-an-operating-system)
+
+2. What is the difference, if any, between the following terms:
+
+   a. Reliability vs. availability 
+
+   b. Security vs. privacy
+
+   c. Security enforcement vs. security policy
+
+   d. Throughput vs. response time
+
+   e. efficiency vs. overhead
+
+   f. API vs. AVM
+
+   g. AVM vs. HAL
+
+   h. proprietary vs. open source
+
+   i. Batch vs. interactive OS
+
+   j. host vs. guest OS
