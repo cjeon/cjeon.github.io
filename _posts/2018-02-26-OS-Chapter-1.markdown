@@ -1,0 +1,53 @@
+---
+layout: post
+title: OS Chapter 1 요약
+categories: OS
+---
+Operating systems: Principles and Practice, Thomas Anderson and Michael Dahlin 을 공부하며 요약 정리하는 노트입니다.
+
+# Chapter 1. Introduction
+
+## 1.1 What Is An Operating System?
+
+Definition of OS: A Layer of software that manages a computer's resources for its users and their applications. (p6)
+Roles of OS: Referee, Illusionist, Glue.
+
+| Role Name   | Job                                                          |
+| ----------- | ------------------------------------------------------------ |
+| Referee     | Resource allocation, isolation, communication                |
+| Illusionist | Provide abstraction, virtualization (infinite ram, dedicated processor etc) |
+| Glue        | Provide API / Interface to simplify and standardize design   |
+
+## 1.2 Operating System Evaluation
+
+| Criteria Name |                                                              |
+| ------------- | ------------------------------------------------------------ |
+| Reliability   | Has less bugs.                                               |
+| Availability  | Available to use (i.e. it's not crahsed.)                    |
+| Security      | computer's operations are not compromised by attackers       |
+| Portability   | can be easily ported to a new hardware system. Has well designed AVM. |
+| Performance   | get the best outcomes out of the hardware                    |
+| Adoption      | has many users                                               |
+
+* Reliability and availability is measured by mean time to failure (mttf) and mean time to repair (mttr).
+
+* Enforcement: how the OS ensures that only permitted actions are allowed.
+
+* Security policy: what is permitted and what is not.
+
+* AVM: Abstract Virtual Machine. Separates Hardware layer and application layer. Kernel provides 1. API, 2. memory access model, and 3. which instructions can be legally executed. A well designed AVM makes hardware and application evolve independently. 
+
+* HAL: Hardware Abstraction Layer: Hardware is abstracted and OS functions on abstracted hardware. 
+
+* Performance: 
+
+  * overhead: the added resource cost due to the abstraction added (efficiency: lack of overhead due to abstraction added)
+
+  * Resource fairness, response time, throughput, predictability 
+  * Example: A car and a road - if there is no stoplights(OS), a car uses full resources without needing to slow down. A system such as stoplights and crosswalk(OS) allows other cars and people (processes) to share the resources, but overhead, delay increases. As the road gets more crowded, througput goes up and predictabilty goes down. 
+
+* network effect: more users -> good environment & cheaper hardware -> more users (cycle)
+
+* proprietary system: OS is owned by a company <-> open system
+
+* 
