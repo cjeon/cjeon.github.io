@@ -10,21 +10,19 @@ before_install:
 before_script:
 - git config --global user.name "$(git --no-pager show --no-patch --format='%an')"
 - git config --global user.email "$(git --no-pager show --no-patch --format='%ae')"
-- ls -R
 - date
 script:
-  - bundle exec jekyll build -t
+- bundle exec jekyll build -t
 after_success:
-  - ls -al
-  - ls -R
-  - git add -A
-  - git commit -m "Updated to $(git rev-parse --short $TRAVIS_COMMIT) at $(date -u +'%Y-%m-%d %H:%M:%S %Z')"
-  - git push https://${GH_TOKEN}@github.com/cjeon/cjeon.github.com.git source:master -v
-
+- git add -A
+- git commit -m "Updated to $(git rev-parse --short $TRAVIS_COMMIT) at $(date -u +'%Y-%m-%d
+  %H:%M:%S %Z')"
+- git push https://${GH_TOKEN}@github.com/cjeon/cjeon.github.com.git source:master --force
+  -v
 branches:
   only:
   - source
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - secure: "ON/HNPjtlnVQn6SGsRuJKqoxIiLzYmu01Vb8n3g0RxnKKCx2k5kf2/nyRY/xi3sGk1LWIEeLfAogtXJrF1sZWUJRdAmbaS9dE0eXtI3NoDEdosMIIeDKmN8EhhUdpjJ8zF66/08bDC4ATxSMcT3ajE4LTsHDcDYp5SgOSV9T9HLUN8ymN+RAxUY8p0KYZ4A6rpRT8wZ6dqnhudrwl4SnbwzBg7OsgD0FffmgjWsD8vSrbGgLPHAOieyxd/YsMG/V/nR9sDxtkMk3MckokE3HdsalMh1Ktkh21ZQgcg0BnaYnX8EC65XQDGDYVUtrleTfWCiq2z6+Ty2NCHsdqAx/Cjmkx/qZB9/KDFfTYCSSlp23zakpi1w3XmwHvKpYo4392kCvoDdVGfL1XacTYSd1CjaCPzPJov2ifaJxVNgP7xAcqKIRhdQT47KJWej3gtKiVwEzR+B0e5qreTpUv0ifLa+KH7F9693W44ok2p/JDr4+F9NlaZ/Cv539kwRfs/lV0XvpkTRVIQIZDOare3z7TTb0GNUDP8CajvJW3ToBh/sJ9PSTU/rLsOcnaUIwPGmk/jLQrS3Fd64fKvg1UaWiaLuwAzR1nJ2RsEjL/yqsD5gXKHOvkKcM8bMQZ/Nc4Lss44nzG+6gpFZbVRBnSsZYb4GLqCShsB++mfLii0isQTA="
+  - secure: vI0346a5tvlilrcI2ZkmE9/dg9Y4Uxj4EDMe2EYBhiYJ2C+lVoR5h01BEIBkKlRAM42LiXdT/+OibLxQyiSn3OhuO5EUyYjLXn0d/cJLU3itu5rX45pBOQR+7BlaCVOWM38YTJKshvFdEls4Vn+ud5Qs/puUmrh0BfX+lyeGomarcoZYXWxSfUnPu9V0M3C7ltNyVqbVlp/wnSehNLn86zWsWt+DKjeAlp/dJ4MO1XzhqJxGC/WwU2FGllgbhHHjnN7DYAKS1CyXUKvOTzNMYTbU6DCYQ95DNPvMEp+DUKAupcxJYs6Qy8u8HuZEw+hcjsGL3qqKi0whk3rU8gTXbZg7q6X7ZQPA6wy9zVusvqmdWi3YcUo75CBICB1qpUlpz59nGOoA+abCby+q5xDcSY8ng0/TX3Ql/Op5dqHwF14oD1ZK/2hvdtY/m/YoB6yOsMbeU0mZRx7hEoskChNLXAsQPmARjvwW+Pe7+diQqmpidZU5egV9Ax7BucQ/lp78pnzsFhrw7BLWEtC3oh4+lxA9i+DbSejFqYr0euX1VAjhbUYBsMMJ2WOeLeGWpHDieplfG/IjIwrQiQlaihNRY/WOTcLZ66Ef+MyLBQjRai183YX1WMdG7lt5E5dhvkS5dyzis5Ft8X2ORSmj28v5H5MoiDPH5k+56oZVjTSKtR8=
