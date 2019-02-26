@@ -11,7 +11,7 @@ email: "adobecs5.kaist@gmail.com"
 description: > # this means to ignore newlines until "baseurl:"
   개발 개발
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://cjeon.github.io" # the base hostname & protocol for your site
+url: "https://cjeon.com" # the base hostname & protocol for your site
 twitter_username: map_r3duce
 github_username:  CJeon
 
@@ -25,5 +25,5 @@ kramdown:
 exclude: [vendor]
 paginate: 5
 paginate_path: "/blog/page:num/"
-gems:
+plugins:
   - jekyll-sitemap
