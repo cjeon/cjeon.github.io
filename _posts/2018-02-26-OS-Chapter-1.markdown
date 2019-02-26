@@ -22,28 +22,28 @@ Roles of OS: Referee, Illusionist, Glue.
 | ----------- | ------------------------------------------------------------ |
 | Referee     | Resource allocation, isolation, communication                |
 | Illusionist | Provide abstraction, virtualization (infinite ram, dedicated processor etc) |
-| Glue        | Provide API / Interface to simplify and standardize design   |
+| Glue        | Provide API / Interface to simplify and standardize the design |
 
 ## 1.2 Operating System Evaluation
 
 | Criteria Name |                                                              |
 | ------------- | ------------------------------------------------------------ |
-| Reliability   | Has less bugs.                                               |
-| Availability  | Available to use (i.e. it's not crahsed.)                    |
+| Reliability   | Has fewer bugs.                                              |
+| Availability  | Available to use (i.e. it's not crashed.)                    |
 | Security      | computer's operations are not compromised by attackers       |
 | Portability   | can be easily ported to a new hardware system. Has well designed AVM. |
 | Performance   | get the best outcomes out of the hardware                    |
 | Adoption      | has many users                                               |
 
-* Reliability and availability is measured by mean time to failure (mttf) and mean time to repair (mttr).
+* Reliability and availability are measured by mean time to failure (MTTF) and mean time to repair (MTTR).
 * Enforcement: how the OS ensures that only permitted actions are allowed.
 * Security policy: what is permitted and what is not.
-* AVM: Abstract Virtual Machine. Separates Hardware layer and application layer. Kernel provides 1. API, 2. memory access model, and 3. which instructions can be legally executed. A well designed AVM makes hardware and application evolve independently. 
+* AVM: Abstract Virtual Machine. Separates Hardware layer and application layer. The kernel provides 1. API, 2. memory access model, and 3. which instructions can be legally executed. A well designed AVM makes hardware and application evolve independently. 
 * HAL: Hardware Abstraction Layer: Hardware is abstracted and OS functions on abstracted hardware. 
 * Performance: 
   * overhead: the added resource cost due to the abstraction added (efficiency: lack of overhead due to abstraction added)
   * Resource fairness, response time, throughput, predictability 
-  * Example: A car and a road - if there is no stoplights(OS), a car uses full resources without needing to slow down. A system such as stoplights and crosswalk(OS) allows other cars and people (processes) to share the resources, but overhead, delay increases. As the road gets more crowded, througput goes up and predictabilty goes down. 
+  * Example: A car and a road - if there are no stoplights(OS), a car uses full resources without needing to slow down. A system such as stoplights and crosswalk(OS) allows other cars and people (processes) to share the resources, but overhead, delay increases. As the road gets more crowded, throughput goes up and predictability goes down. 
 * network effect: more users -> good environment & cheaper hardware -> more users (cycle)
 * proprietary system: OS is owned by a company <-> open source system
 
@@ -52,13 +52,14 @@ Roles of OS: Referee, Illusionist, Glue.
 ## 1.3 Operating Systems: Past, Present, and Future
 ### 1.3.1 Impact of Technology Trends
 ### 1.3.2 Early Operating Systems
-were designed to reduces bugs since computing cost was expensive.
+were designed to reduce bugs since computing cost was expensive.
 ### 1.3.3 Multi-User Operating Systems
 Batch Operating System: loop {load, run, unload single task}. While running, Direct Memory Access(DMA) transfers next/previous job. 
-BOS was soon extended to run multiple applications. EX) while doing I/O, OS runs next job. Multitasking increases processor efficiency nearly 100%. 
-How to debug an OS: rebooting the machine is expensive - use virtual machine, run OS as an app.
+BOS was soon extended to run multiple applications. EX) while doing I/O, OS runs next job. Multitasking increases processor efficiency by nearly 100%. 
+How to debug an OS: rebooting the machine is expensive - use a virtual machine, run OS as an app.
+
 ### 1.3.4 Time-Sharing Operating Systems
-Time-Sharing operating systems are designed to support interactive use of the computer rather than the batch mode processing of earlier systems. Each user's input causes interrupt to processor. 
+Time-Sharing operating systems are designed to support interactive use of the computer rather than the batch mode processing of earlier systems. Each user's input causes interrupt to the processor. 
 ### 1.3.5 Modern Operating Systems
 vary from desktop OS, mobile OS, server to embedded.
 ### 1.3.6. Future OS
