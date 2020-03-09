@@ -7,12 +7,11 @@
 
 # Site settings
 title: "CJeon's Blog"
-email: "adobecs5.kaist@gmail.com"
+email: "me@cjeon.com"
 description: > # this means to ignore newlines until "baseurl:"
   개발 개발
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cjeon.com" # the base hostname & protocol for your site
-twitter_username: map_r3duce
 github_username:  CJeon
 
 # Build settings
