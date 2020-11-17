@@ -1,5 +1,4 @@
 ---
-permalink: /l/
-redirect_from: /linkedin/
+permalink: /linkedin/
 redirect_to: https://www.linkedin.com/in/cjeon-dev/
 ---
