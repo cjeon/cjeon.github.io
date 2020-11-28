@@ -3,7 +3,7 @@ layout: post
 title: "The member variable: allocation order"
 ---
 
-If you can answer the below questions correctly, you do not have to read this article.
+If you can answer below questions correctly, you do not have to read this article.
 
 In java, during the class instantiation process, 
 
