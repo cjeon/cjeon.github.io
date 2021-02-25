@@ -88,6 +88,8 @@ This will
 3. The flag `-i` is for interactive, `-t` is for pseudo-terminal (so that we could send inputs and receive outputs).
 4. Then we specify the image name and tag. And we don't give any command to run, to use default `CMD`.
 
+We can create a volume by executing `docker volume create name-volume`, and we can view contents of the volume by multiple ways. I use VS code to view them. See https://code.visualstudio.com/docs/remote/containers#_inspecting-volumes for details.
+
 We can create a volume by executing `docker volume create name-volume`, and we can view contents of the volume in multiple ways. I use VS code to view them. See https://code.visualstudio.com/docs/remote/containers#_inspecting-volumes for details.
 
 ## Outro
