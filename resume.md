@@ -7,15 +7,19 @@ Cheolho Jeon, me [at] cjeon.com, cjeon.com (phone number available upon request)
 
 More details available at [LinkedIn](/linkedin)
 
-Last updated at Nov, 2020.
+Last updated at Nov, 2022.
 
 ## Interests
 
-Kotlin, Reactive programming, Functional Programming, Testing, Automation, CI/CD
+Android, Kotlin, Reactive programming, Functional Programming, Testing, Automation, CI/CD
 
 ## Experience
 
-### 2020.06 - current
+### 2021.11 - current
+
+Full-time software engineer at Engineering team (Today) at VTOV.
+
+### 2020.06 - 2021.11
 
 Full-time software engineer at Android SDK team (Sendbird) at Sendbird.
 
